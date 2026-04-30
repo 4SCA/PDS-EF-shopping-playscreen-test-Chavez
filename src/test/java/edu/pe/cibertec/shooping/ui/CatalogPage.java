@@ -21,4 +21,13 @@ public class CatalogPage {
                         "//android.widget.TextView[contains(@text,'" + producto + "')]"
                 ));
     }
+
+    public static final Target FIRST_ADD_BUTTON =
+            Target.the("primer botón agregar al carrito")
+                    .located(AppiumBy.xpath(
+                            "(//*[@content-desc='Agregar al carrito'])[1]"
+                    ));
+    public static final Target CART_BUTTON =
+            Target.the("cart button")
+                    .located(AppiumBy.xpath("//android.widget.TextView[@text=\"Carrito\"]"));
 }

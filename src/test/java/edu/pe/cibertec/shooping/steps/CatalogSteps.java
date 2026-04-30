@@ -4,10 +4,13 @@ import edu.pe.cibertec.shooping.tasks.FilterByCategory;
 import edu.pe.cibertec.shooping.tasks.Login;
 import edu.pe.cibertec.shooping.tasks.SearchProduct;
 import edu.pe.cibertec.shooping.ui.TheMainScreen;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import edu.pe.cibertec.shooping.ui.CatalogPage;
+import net.serenitybdd.screenplay.actors.Cast;
 import net.serenitybdd.screenplay.actors.OnStage;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
@@ -17,6 +20,16 @@ import static org.hamcrest.Matchers.equalTo;
 import org.junit.jupiter.api.Assertions;
 
 public class CatalogSteps {
+    @Before
+    public void setUp() {
+        OnStage.setTheStage(Cast.ofStandardActors());
+    }
+
+    @After
+    public void tearDown() {
+        OnStage.drawTheCurtain();
+    }
+
     @Given("que el usuario esta logueado en la aplicacion")
     public void usuarioLogueado() {
 
