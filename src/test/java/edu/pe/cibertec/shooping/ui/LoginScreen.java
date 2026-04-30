@@ -17,4 +17,8 @@ public class LoginScreen {
     public static final Target LOGIN_BUTTON = Target
             .the("login button")
             .located(AppiumBy.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.Button"));
+
+    public static final Target LOGIN_TITLE =
+            Target.the("login title")
+                    .located(AppiumBy.xpath("//android.widget.TextView[@text='Shopping Cart']"));
 }

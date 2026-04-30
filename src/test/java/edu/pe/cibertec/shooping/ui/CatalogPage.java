@@ -30,4 +30,8 @@ public class CatalogPage {
     public static final Target CART_BUTTON =
             Target.the("cart button")
                     .located(AppiumBy.xpath("//android.widget.TextView[@text=\"Carrito\"]"));
+
+    public static final Target PROFILE_BUTTON =
+            Target.the("botón perfil")
+                    .located(AppiumBy.xpath("//android.widget.TextView[@text='Perfil']"));
 }

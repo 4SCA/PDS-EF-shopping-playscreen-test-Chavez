@@ -39,7 +39,7 @@ public class AppiumHooks {
     @After
     public void tearDown() {
         if (driver != null) {
-            driver.quit();
+            driver.terminateApp("edu.pe.cibertec.shooping_cart_appium_demo");
         }
         OnStage.drawTheCurtain();
     }

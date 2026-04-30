@@ -73,7 +73,7 @@ public class CheckoutSteps {
     }
 
     @Given("que el usuario tiene el carrito vacio")
-    public void carrito_vacio() {
+    public void carritoVacio() {
         OnStage.theActorCalled("Andrea").attemptsTo(
                 Login.withCredentials("user1@test.com", "password1")
 
